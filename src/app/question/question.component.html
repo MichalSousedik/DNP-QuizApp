@@ -1,0 +1,33 @@
+<mat-card *ngIf="type === 'solution'" [ngClass]="isCorrect() ? 'correct' : 'incorrect'">
+  <mat-card-content>
+    <h2>{{question.text}}</h2>
+    <section class="options">
+      <mat-radio-group class="radio-group" [disabled]="true">
+        <mat-radio-button [checked]="option.isChecked" class="radio" *ngFor="let option of question.options" value="{{option.id}}" >{{option.text}} <label *ngIf="isOptionCorrect(option)" style="font-weight:bold;">(Correct)</label></mat-radio-button>
+      </mat-radio-group>
+    </section>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="type === 'preview'">
+  <mat-card-content>
+    <h2>{{question.text}}</h2>
+    <section class="options">
+      <mat-radio-group class="radio-group" [disabled]="true">
+        <mat-radio-button [checked]="option.isChecked" class="radio" *ngFor="let option of question.options" value="{{option.id}}" >{{option.text}} <label *ngIf="isOptionCorrect(option)" style="font-weight:bold;">(Correct)</label></mat-radio-button>
+      </mat-radio-group>
+    </section>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="type === 'solve'" >
+  <mat-card-content>
+    <h2>{{question.text}}</h2>
+    <section class="options">
+      <mat-radio-group class="radio-group" [(ngModel)]="question.selectedOptionId">
+        <mat-radio-button [checked]="option.isChecked" class="radio" *ngFor="let option of question.options" [value]="option.id" >{{option.text}}</mat-radio-button>
+      </mat-radio-group>
+    </section>
+  </mat-card-content>
+</mat-card>
+

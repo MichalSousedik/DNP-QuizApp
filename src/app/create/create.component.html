@@ -1,0 +1,16 @@
+
+   <div class="example-form">
+      <mat-form-field class="quizname">
+        <input matInput placeholder="Quiz name" [(ngModel)]="quiz.name">
+      </mat-form-field>
+      
+      <button mat-raised-button color="primary" (click)="createQuiz();">Create quiz</button>
+    </div>
+    <div *ngIf="quizNameEmpty"><small class="text-danger">Quiz name cannot be empty.</small></div>
+    <div *ngIf="noQuestions"><small class="text-danger">There are no questions in quiz.</small></div>
+
+
+
+  <button mat-raised-button color="primary" (click)="createQuestion()">Create question</button>
+
+  <app-question *ngFor="let question of quiz.questions" [type]="'preview'" [question]="question" ></app-question>

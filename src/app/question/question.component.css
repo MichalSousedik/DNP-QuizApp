@@ -1,0 +1,27 @@
+h2 {
+  font-size:16px;
+}
+
+.mat-card, .radio{
+    margin-top:10px;
+}
+
+.options{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.correct{
+  background: #81c784;
+}
+
+.incorrect{
+  background: #ef9a9a;
+}

@@ -1,0 +1,33 @@
+.example-full-width {
+  width: 100%;
+}
+
+.mat-card{
+    margin-top: 10px;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+
+.add-option{
+    margin-left:10px;
+}
+
+.options, .create-class{
+
+    margin-top:10px;
+}
+
+.text-danger{
+  color:red;
+}

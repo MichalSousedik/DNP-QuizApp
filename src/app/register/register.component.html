@@ -1,0 +1,22 @@
+<mat-card class="login-card">
+  <mat-card-content>
+    <h1>Create account</h1>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="User name" [(ngModel)]="user.username" name="username" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="password" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Confirm password" type="password" [(ngModel)]="passwordConfirm" name="passwordConfirm" >
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="createUser()">Sign up</button>
+       <div *ngIf="userEmpty"><small class="text-danger">User name cannot be empty.</small></div>
+        <div *ngIf="passwordNotTheSame"><small class="text-danger">Passwords have to be the same.</small></div>
+    </form>
+  </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,7 @@
+<h1>{{quiz.name}}</h1>
+
+<app-question *ngFor="let question of quiz.questions" [question]="question" [type]="'solve'"></app-question>
+
+ <div *ngIf="optionNotSelected"><small class="text-danger" >Some of the questions are not answered.</small></div>
+
+<button mat-raised-button color="primary" class="submit" (click)="submit()">Submit</button>

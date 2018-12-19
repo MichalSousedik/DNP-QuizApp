@@ -1,0 +1,18 @@
+<h2>{{solution.quizName}}</h2>
+
+<mat-card>
+  <mat-card-content>
+  <table class="solution">
+    <tr>
+      <td>Questions:</td>
+      <td>{{solution.questions.length}}</td>
+    </tr>
+    <tr>
+      <td>Correct:</td>
+      <td>{{solution.correct}}</td>
+    </tr>
+  </table>
+  </mat-card-content>
+</mat-card>
+
+<app-question *ngFor="let question of solution.questions" [question]="question" [type]="'solution'"></app-question>
